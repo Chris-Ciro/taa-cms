@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mocks",
+  "info": {
+    "singularName": "mock",
+    "pluralName": "mocks",
+    "displayName": "mocks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "textoArquivoJson": {
+      "type": "json"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "mocks"
+    },
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}
